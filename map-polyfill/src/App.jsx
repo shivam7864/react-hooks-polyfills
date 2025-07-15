@@ -19,13 +19,14 @@ import "./polyfills/deepCompare.js";
 import "./polyfills/setTimeout.js";
 import "./polyfills/setInterval.js";
 import "./polyfills/debouncing.js";
+import "./polyfills/event.js";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <input id="search" type="text" name="search" onChange={(e) =>handleInput(e)}/>
+      {/* <input id="search" type="text" name="search" onChange={(e) =>handleInput(e)}/> */}
     </>
   );
 }
