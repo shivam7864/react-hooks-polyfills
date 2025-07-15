@@ -20,6 +20,7 @@ import "./polyfills/setTimeout.js";
 import "./polyfills/setInterval.js";
 import "./polyfills/debouncing.js";
 import "./polyfills/event.js";
+import "./polyfills/promise.js";
 
 function App() {
   const [count, setCount] = useState(0);

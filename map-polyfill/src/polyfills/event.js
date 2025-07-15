@@ -48,15 +48,15 @@ const ev = new EventEmitter();
 
 // Define listener functions
 function orderDelivered(orderId) {
-  console.log("Order Delivered", orderId);
+  // console.log("Order Delivered", orderId);
 }
 
 function orderPlaced(orders) {
-  console.log("Order placed", orders);
+  // console.log("Order placed", orders);
 }
 
 function orderPlacedByOtherUser(orders) {
-  console.log("Order placed by", orders);
+  // console.log("Order placed by", orders);
 }
 
 // Register listeners
