@@ -42,15 +42,16 @@ function deepClone(param, seen = new WeakMap()) {
   if (seen.has(param)) {
     throw new Error("Cyclic Reference");
   }
+  seen.set(param, true);
   Object.keys(param).forEach(function (key) {
     const data = param[key];
-    if (typeof data === "object" && typeof data !== null) {
+    if (typeof data === "object" && data !== null) {
       result[key] = deepClone(data, seen);
     } else {
       result[key] = data;
     }
   });
-  seen.set(param, true);
+  
   return result;
 }
 

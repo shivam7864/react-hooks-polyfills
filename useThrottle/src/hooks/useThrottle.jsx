@@ -20,3 +20,5 @@ const useThrottle = (callback, delay) => {
 };
 
 export default useThrottle;
+
+
