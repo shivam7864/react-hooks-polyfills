@@ -17,7 +17,7 @@ Array.prototype.mySlice = function (start, end) {
     const newIndex = length + end;
     end = Math.max(newIndex, 0);
   } else {
-    start = Math.min(end, length);
+    end = Math.min(end, length);
   }
 
   const result=[];

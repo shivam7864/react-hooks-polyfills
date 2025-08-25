@@ -7,7 +7,9 @@ window.setInterval = function (callback, interval, ...args) {
 
   function execute() {
     callback(...args);
-    window.intervals[intervalId].interval += interval;
+    if (window.intervals[id]) {
+      window.intervals[id].interval += interval;
+    }
   }
 
   window.intervals[intervalId] = {
@@ -16,7 +18,7 @@ window.setInterval = function (callback, interval, ...args) {
     args,
   };
 
-  if(Object.keys(window.intervals).length === 1){
+  if (Object.keys(window.intervals).length === 1) {
     processIntervals();
   }
   return intervalId;
@@ -33,19 +35,19 @@ function processIntervals() {
     }
   }
 
-  Object.keys(window.intervals).forEach(executeIntervals)
+  Object.keys(window.intervals).forEach(executeIntervals);
 }
 window.clearInterval = function () {
   delete window.intervals[id];
 };
 
-setInterval(()=>{
-    // console.log("Hello")
-},1000)
+setInterval(() => {
+  // console.log("Hello")
+}, 1000);
 
-function showName(name){
-    // console.log("Name is", name); 
+function showName(name) {
+  // console.log("Name is", name);
 }
 // console.log("!");
 
-setInterval(showName,1000,"Shivam")
+setInterval(showName, 1000, "Shivam");
